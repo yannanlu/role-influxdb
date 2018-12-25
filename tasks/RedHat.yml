@@ -28,7 +28,7 @@
 - name: Pause a while
   pause:
     seconds: "{{influxdb_pausetime}}"
-  when: influxdb_up|changed
+  when: influxdb_up is changed
 
 - name: Create database
   influxdb_database:
